@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #312e81, #6b21a8);
+  color: white;
+}
+
+.app {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controls button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background-color: #4338ca;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.panel {
+  background-color: rgba(30, 27, 75, 0.85);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+}
+
+.gradient-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.placeholder {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.math {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.graph {
+  background-color: #4c1d95;
+  height: 150px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+
