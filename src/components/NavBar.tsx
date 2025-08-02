@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
       </nav>
       <div>
         <a
-          href="https://github.com/dummy/repo"
+          href="https://github.com/senku-200/pinss_explainer_client"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-gray-700 hover:text-black"

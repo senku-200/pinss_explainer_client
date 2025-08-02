@@ -94,7 +94,7 @@ const NeuralNetwork = forwardRef(
     {
       hiddenLayers = 1,
       neuronsPerLayer = 4,
-      showWeight = false,
+      // showWeight = false,
       learningRate = 0.01,
       decayConstant = 0.1,
       epoch = 10,
@@ -109,7 +109,7 @@ const NeuralNetwork = forwardRef(
     }: NeuralNetworkProps,
     ref
   ) => {
-    const svgRef = useRef<SVGSVGElement>(null);
+    // const svgRef = useRef<SVGSVGElement>(null);
     const [positions, setPositions] = useState<{ x: number; y: number }[][]>(
       []
     );
@@ -268,7 +268,7 @@ const NeuralNetwork = forwardRef(
           }
           setHighlights(highlights);
           setActiveConnection(undefined);
-          const delay = speedMap[speedRef.current] ?? 200;
+          const delay = speedRef.current !== undefined ? speedMap[speedRef.current] ?? 200 : 200;
           await new Promise((res) => setTimeout(res, delay));
         }
       }
@@ -294,7 +294,7 @@ const NeuralNetwork = forwardRef(
                 }
               : undefined
           );
-          const delay = speedMap[speedRef.current] ?? 200;
+          const delay = speedRef.current !== undefined ? speedMap[speedRef.current] ?? 200 : 200;
           if (ep < epoch - 1)
             await new Promise((res) => setTimeout(res, delay));
         }
@@ -364,13 +364,7 @@ const NeuralNetwork = forwardRef(
       else lossColor = "#16a34a"; // green-600
     }
     // TEMP: Show activations and positions in overlay for debugging
-    const debugOverlay = (
-      <div style={{position:'absolute',right:0,top:0,zIndex:9999,background:'#fffbe6',color:'#333',fontSize:12,padding:8,border:'1px solid #facc15',maxWidth:400,overflow:'auto'}}>
-        <div><b>positions:</b> {JSON.stringify(positions.map(l=>l.length))}</div>
-        <div><b>activations (slice(1)):</b> {JSON.stringify(activations.slice(1).map(l=>l.length))}</div>
-        <div><b>activations values:</b> {JSON.stringify(activations.slice(1))}</div>
-      </div>
-    );
+    // const debugOverlay = null;
     return (
       <div
         className="flex items-center justify-center w-full bg-white border rounded-lg px-2 overflow-x-auto relative"
@@ -391,7 +385,7 @@ const NeuralNetwork = forwardRef(
             height={svgHeight}
             className="absolute left-0 top-0 z-0 pointer-events-none"
           >
-            {layerStructure.map((size, i) => (
+            {layerStructure.map((_, i) => (
               <text
                 key={`layer-label-${i}`}
                 x={(i + 1) * (svgWidth / (layerStructure.length + 1))}

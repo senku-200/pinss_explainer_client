@@ -11,8 +11,8 @@ export type ConnectionProps = {
 
 const NetworkConnections: React.FC<ConnectionProps> = ({
   positions,
-  weights,
-  showWeight = false,
+  // weights,
+  // showWeight = false,
   activeConnection,
 }) => {
   if (positions.length < 2) return null;
@@ -22,7 +22,7 @@ const NetworkConnections: React.FC<ConnectionProps> = ({
         layer.map((from, j) =>
           positions[i + 1]?.map((to, k) => {
             const pathD = generatePath(from, to);
-            const weight = weights[i]?.[j]?.[k] ?? 0;
+            // const weight = weights[i]?.[j]?.[k] ?? 0;
                 // Highlight if the from-neuron or to-neuron is highlighted as input or active
                 let highlightColor = "#6366f1";
                 let highlight = false;
@@ -37,8 +37,8 @@ const NetworkConnections: React.FC<ConnectionProps> = ({
             // Font size reduced to 10
             // Color: highlight when active, default otherwise
             // Calculate midpoint for label
-            const midX = (from.x + to.x) / 2;
-            const midY = (from.y + to.y) / 2 - 8; // 8px above the line
+            // const midX = (from.x + to.x) / 2;
+            // const midY = (from.y + to.y) / 2 - 8; // 8px above the line
             return (
               <g key={`link-${i}-${j}-${k}`}>
                 <path

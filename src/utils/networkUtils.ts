@@ -131,7 +131,7 @@ export function generatePath(
 ) {
   const dx = to.x - from.x;
   const dy = to.y - from.y;
-  const path = new Path2D();
+  // const path = new Path2D();
   const svgPath = d3.path();
 
   svgPath.moveTo(from.x, from.y);
