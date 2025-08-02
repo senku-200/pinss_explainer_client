@@ -1,0 +1,19 @@
+.live-graphs-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 2rem 0 2rem;
+  justify-content: flex-end;
+}
+.graph-box {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  padding: 0.25rem 0.5rem;
+  width: 140px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
