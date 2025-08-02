@@ -78,7 +78,7 @@ const LiveGraphs: React.FC<LiveGraphsProps> = ({ losses, predictions, targets })
         display: true,
         position: "top" as const,
         labels: {
-          font: { size: 13, weight: 'normal' },
+          font: { size: 13, weight: "normal" as const },
           usePointStyle: true,
           boxWidth: 18,
           boxHeight: 3,
@@ -87,7 +87,7 @@ const LiveGraphs: React.FC<LiveGraphsProps> = ({ losses, predictions, targets })
       title: {
         display: true,
         text: 'Loss vs Epoch',
-        font: { size: 16, weight: 'bold' },
+        font: { size: 16, weight: "bold" as const },
         padding: { top: 8, bottom: 8 },
       },
     },
@@ -126,7 +126,7 @@ const LiveGraphs: React.FC<LiveGraphsProps> = ({ losses, predictions, targets })
         display: true,
         position: "top" as const,
         labels: {
-          font: { size: 13, weight: 'normal' },
+          font: { size: 13, weight: "normal" as const },
           usePointStyle: true,
           boxWidth: 18,
           boxHeight: 3,
@@ -135,7 +135,7 @@ const LiveGraphs: React.FC<LiveGraphsProps> = ({ losses, predictions, targets })
       title: {
         display: true,
         text: 'Prediction vs Target',
-        font: { size: 16, weight: 'bold' },
+        font: { size: 16, weight: "bold" as const },
         padding: { top: 8, bottom: 8 },
       },
     },
